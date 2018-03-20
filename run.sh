@@ -18,8 +18,8 @@ if [ "$TMP_AWS_SECRET_KEY" = "" ]; then
   popd > /dev/null & exit
 fi
 if [ "$TMP_AWS_REGION" = "" ]; then
-  echo Require AWS_DEFAULT_REGION >&2
-  popd > /dev/null & exit
+  # Asia(TOKYO)
+  TMP_AWS_REGION="ap-northeast-1"
 fi
 if [ "$TMP_NO_CACHE" = "" ]; then
   TMP_NO_CACHE="false"
